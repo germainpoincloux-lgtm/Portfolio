@@ -353,7 +353,8 @@ footer {
 }
 
 .phone-hero figcaption,
-.phone-gallery figcaption {
+.phone-gallery figcaption,
+.media-container figcaption {
     margin-top: 0.6rem;
     font-size: 0.8rem;
     color: #666;
