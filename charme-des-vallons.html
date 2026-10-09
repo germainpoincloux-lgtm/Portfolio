@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet : Le Charme des Vallons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="project-page">
+    <div class="container">
+
+        <!-- Navigation Retour -->
+        <nav class="back-nav mono">
+            <a href="index.html">← Retour au dossier</a>
+        </nav>
+
+        <!-- En-tête du projet -->
+        <header class="project-header">
+            <h1>Le Charme des Vallons</h1>
+
+            <div class="project-meta mono">
+                <div>
+                    <span class="meta-label">Année</span>
+                    <span>2026</span>
+                </div>
+                <div>
+                    <span class="meta-label">Catégorie</span>
+                    <span>Web Sur Mesure — création de site</span>
+                </div>
+                <div>
+                    <span class="meta-label">Stack Technique</span>
+                    <span>PHP, JavaScript, CSS, API Google Calendar [, MySQL ?]</span>
+                </div>
+                <div>
+                    <span class="meta-label">Rôle</span>
+                    <span>Design, intégration et développement [seul ? pour les propriétaires du gîte]</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Image Principale / Hero -->
+            <figure class="media-container hero-media">
+                <img src="assets/img/charme-des-vallons-accueil.jpg" alt="Page d'accueil du site sur ordinateur : grande photo de la pièce de vie du gîte avec murs en pierre et poutres blanches, titre Le charme des vallons et menu de navigation" width="1600" height="790">
+                <figcaption class="mono">Page d'accueil sur ordinateur</figcaption>
+            </figure>
+
+            <!-- Contenu explicatif -->
+            <article class="project-description">
+                <section>
+                    <h2>Le point de départ</h2>
+                    <p>Le Charme des Vallons est un gîte de deux chambres à Saint-Senoux, en Bretagne, face à l'église à bulbe du village et à deux pas des bords de Vilaine. Sa seule présence en ligne était une fiche dans l'annuaire de l'office de tourisme : des photos en vrac, un court paragraphe et un tarif, sans aucun moyen de connaître les disponibilités ni de réserver. J'ai conçu son premier site dédié, pensé pour mettre en valeur le cachet du lieu et rendre la réservation simple.</p>
+                </section>
+
+                <section>
+                    <h2>Le calendrier de réservation</h2>
+                    <p>Le cœur technique du projet est un calendrier de disponibilités connecté à Google Agenda grâce à l'API Google Calendar. [D'où viennent les réservations : saisies par la propriétaire dans son agenda ? synchronisées depuis Airbnb/Booking ?] Le site interroge l'agenda [côté serveur en PHP ? en JavaScript ?] et affiche en temps réel les dates libres et occupées. [Le visiteur peut-il sélectionner ses dates et envoyer une demande ? Est-ce que ça crée un événement dans l'agenda ?] Résultat : la propriétaire gère tout depuis son agenda habituel, sans outil supplémentaire, et le site est toujours à jour.</p>
+                </section>
+            </article>
+
+            <figure class="media-container">
+                <img src="assets/img/charme-des-vallons-reservation.jpg" alt="Page Réserver votre séjour : calendrier d'octobre 2026 ouvert sur le champ d'arrivée, champs de départ, nombre d'adultes et d'enfants, et bouton Vérifiez les disponibilités" width="1600" height="741" loading="lazy">
+                <figcaption class="mono">Page Réserver : sélection des dates dans le calendrier</figcaption>
+            </figure>
+
+            <!-- Avant / Après -->
+            <article class="project-description">
+                <section>
+                    <h2>Avant / Après</h2>
+                </section>
+            </article>
+
+            <div class="media-grid">
+                <figure class="media-container">
+                    <!-- Remplacer par la capture de la fiche de l'office de tourisme -->
+                    <div class="placeholder-img mono">[Capture de la fiche office de tourisme]</div>
+                    <figcaption class="mono">Avant — fiche dans l'annuaire de l'office de tourisme</figcaption>
+                </figure>
+                <figure class="media-container">
+                    <img src="assets/img/charme-des-vallons-accueil.jpg" alt="Page d'accueil du nouveau site du gîte avec photo pleine largeur de la pièce de vie" width="1600" height="790" loading="lazy">
+                    <figcaption class="mono">Après — site dédié</figcaption>
+                </figure>
+            </div>
+
+            <article class="project-description">
+                <section>
+                    <h2>Un site complet</h2>
+                    <p>Le site comprend une présentation détaillée du gîte et de ses chambres, une galerie photo, une section sur le village de Saint-Senoux et ses commerces, un guide pratique pour les voyageurs [et un espace d'administration qui permet de créer de nouvelles pages sans toucher au code — à confirmer].</p>
+                </section>
+            </article>
+
+            <div class="media-grid">
+                <figure class="media-container">
+                    <img src="assets/img/charme-des-vallons-presentation.jpg" alt="Section Maison de vacances : texte de présentation du gîte, boutons Plus d'informations et Réservation, et photo de linge plié sur un lit" width="1600" height="674" loading="lazy">
+                    <figcaption class="mono">Présentation du gîte</figcaption>
+                </figure>
+                <figure class="media-container">
+                    <img src="assets/img/charme-des-vallons-guide-pratique.jpg" alt="Page Guide pratique et règles de vie : heure d'arrivée dès 15 h, connexion Wi-Fi, règles de la maison et procédure de départ en quatre étapes" width="922" height="855" loading="lazy">
+                    <figcaption class="mono">Guide pratique</figcaption>
+                </figure>
+                <figure class="media-container">
+                    <img src="assets/img/charme-des-vallons-connexion.jpg" alt="Page de connexion à l'espace personnel : photo de l'allée menant à la maison en pierre à gauche, formulaire courriel et mot de passe à droite" width="1600" height="787" loading="lazy">
+                    <figcaption class="mono">Connexion à l'espace personnel</figcaption>
+                </figure>
+                <figure class="media-container">
+                    <img src="assets/img/charme-des-vallons-creer-compte.jpg" alt="Formulaire Créer un compte membre : avatar, identité, coordonnées de contact masquées et mot de passe" width="1095" height="936" loading="lazy">
+                    <figcaption class="mono">Création d'un compte</figcaption>
+                </figure>
+                <figure class="media-container">
+                    <img src="assets/img/charme-des-vallons-espace-client-profil.jpg" alt="Espace client : photo de profil, bouton pour changer l'avatar et champs d'identité et de contact" width="1184" height="619" loading="lazy">
+                    <figcaption class="mono">Espace client : profil</figcaption>
+                </figure>
+                <figure class="media-container">
+                    <img src="assets/img/charme-des-vallons-espace-client-sejours.jpg" alt="Espace client : tableau Historique de vos séjours avec dates d'arrivée et de départ et statut Confirmée" width="1209" height="866" loading="lazy">
+                    <figcaption class="mono">Espace client : historique des séjours</figcaption>
+                </figure>
+            </div>
+
+            <article class="project-description">
+                <section>
+                    <h2>Défis techniques</h2>
+                    <ul>
+                        <li>Intégration de l'API Google Calendar : [authentification — clé API ou compte de service —, lecture des événements, gestion du cache, etc.].</li>
+                        <li>[Principale difficulté rencontrée et comment tu l'as résolue.]</li>
+                        <li>Navigation avec menu déroulant, entièrement responsive de l'ordinateur au mobile.</li>
+                        <li>[Pages dynamiques générées à partir d'un identifiant (slug), si c'est bien un système de gestion de contenu maison.]</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Résultat</h2>
+                    <p>[Scores Lighthouse avant/après si disponibles.] Le site est en cours de finalisation avant sa mise en ligne pour les propriétaires.</p>
+                </section>
+
+                <section>
+                    <h2>Ce que j'ai appris</h2>
+                    <p>[Ex. : intégrer une API tierce et gérer son authentification, concevoir pour un vrai client avec de vraies contraintes, …]</p>
+                </section>
+            </article>
+
+            <!-- Lien final vers le projet -->
+            <div class="project-action">
+                <a href="https://germainpoincloux.techniquesmedia.com/Le-charme-des-vallons/" target="_blank" rel="noopener" class="action-link">
+                    Voir la démo <span class="arrow">↗</span>
+                </a>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content mono">
+                <p>Status : <span class="highlight">Recherche de stage (Avril 2027) — Région de Québec</span></p>
+                <a href="mailto:germainpoincloux@email.com" class="email-link">germainpoincloux@email.com</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
