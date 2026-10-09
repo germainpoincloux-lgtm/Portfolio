@@ -299,6 +299,27 @@ footer {
     font-weight: normal;
 }
 
+/* Encadré discret d'accès à la démo */
+.demo-access {
+    margin-top: 5rem;
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.demo-access a {
+    display: inline;
+}
+
+.demo-access a:hover {
+    text-decoration: underline;
+}
+
+.demo-access + .project-action {
+    margin-top: 1.5rem;
+}
+
 .action-link.secondary {
     font-size: 1.2rem;
     border-top: 1px solid var(--border-color);
