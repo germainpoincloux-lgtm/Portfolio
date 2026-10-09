@@ -305,6 +305,61 @@ footer {
     padding: 1.5rem 0;
 }
 
+/* Listes dans le texte explicatif */
+.project-description ul {
+    padding-left: 1.2rem;
+}
+
+.project-description li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+/* Captures de téléphone (format portrait) */
+.phone-hero {
+    max-width: 360px;
+    margin: 3rem auto;
+}
+
+.phone-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 3rem 0;
+    align-items: start;
+}
+
+/* Variante : deux captures côte à côte (comparaison de thèmes) */
+.phone-gallery-pair {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.phone-gallery figure {
+    margin: 0;
+}
+
+.phone-hero img,
+.phone-gallery img {
+    width: 100%;
+    height: auto; /* Ratio naturel de la capture */
+    display: block;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+.phone-hero figcaption,
+.phone-gallery figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.8rem;
+    color: #666;
+    text-align: center;
+}
+
 /* Responsive pour la page projet */
 @media (max-width: 768px) {
     .project-header h1 {
@@ -318,6 +373,11 @@ footer {
 
     .media-grid {
         grid-template-columns: 1fr; /* Les images s'empilent sur mobile */
+    }
+
+    .phone-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
 
     .action-link {

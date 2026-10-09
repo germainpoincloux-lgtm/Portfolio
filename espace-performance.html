@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet : Espace Performance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="project-page">
+    <div class="container">
+
+        <!-- Navigation Retour -->
+        <nav class="back-nav mono">
+            <a href="index.html">← Retour au dossier</a>
+        </nav>
+
+        <!-- En-tête du projet -->
+        <header class="project-header">
+            <h1>Espace Performance</h1>
+
+            <div class="project-meta mono">
+                <div>
+                    <span class="meta-label">Année</span>
+                    <span>2025–2026</span>
+                </div>
+                <div>
+                    <span class="meta-label">Catégorie</span>
+                    <span>Application Web (SPA mobile-first)</span>
+                </div>
+                <div>
+                    <span class="meta-label">Stack Technique</span>
+                    <span>Vue 3, Vite, PHP 8, MySQL</span>
+                </div>
+                <div>
+                    <span class="meta-label">Rôle</span>
+                    <span>Conception, design et développement full-stack (projet personnel, seul)</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Image Principale / Hero -->
+            <figure class="phone-hero">
+                <img src="assets/img/espace-performance-nutrition.jpg" alt="Tableau de bord nutrition en mode sombre : jauge circulaire indiquant 608 kcal consommées sur 2200, bouton Rentrer un repas et barres de progression des protéines, glucides et lipides" width="900" height="1871">
+                <figcaption class="mono">Tableau de bord nutrition</figcaption>
+            </figure>
+
+            <!-- Contenu explicatif -->
+            <article class="project-description">
+                <section>
+                    <h2>Le Concept</h2>
+                    <p>Je voulais un outil de suivi sportif qui ne me fasse pas perdre de temps. Les applications de santé existantes multiplient les confirmations, les paniers temporaires et les calculs à faire de tête. Espace Performance regroupe dans une seule application mobile la planification des entraînements, le journal alimentaire et le suivi des métriques corporelles, avec une règle simple : chaque saisie doit demander le moins de gestes possible.</p>
+                </section>
+
+                <section>
+                    <h2>Nutrition</h2>
+                    <p>Une jauge circulaire en SVG montre d'un coup d'œil les calories consommées et celles qui restent. On saisit la portion telle qu'elle est écrite sur l'emballage (80 g de pâtes, par exemple) et l'application ramène automatiquement les valeurs à 100 g. Un aliment choisi est enregistré immédiatement, sans panier intermédiaire, et les repas récurrents peuvent être regroupés en combos pour être ajoutés en un seul geste.</p>
+                </section>
+            </article>
+
+            <div class="phone-gallery">
+                <figure>
+                    <img src="assets/img/espace-performance-creer-aliment.jpg" alt="Formulaire Créer un aliment pour 100 g : nom Bœuf haché 5 %, 125 kcal, 21 g de protéines, 0 g de glucides et 5 g de lipides" width="900" height="1865" loading="lazy">
+                    <figcaption class="mono">Ajout d'un aliment</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/espace-performance-choix-aliment.jpg" alt="Liste de sélection séparant les aliments simples (bœuf haché, riz) et les combos personnalisés (Repas simple, 608 kcal)" width="900" height="1871" loading="lazy">
+                    <figcaption class="mono">Choix d'un aliment ou d'un combo</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/espace-performance-assiette-combo.jpg" alt="Fenêtre Rentrer un aliment avec l'assiette en cours (150 g de bœuf haché, 300 g de riz) et un champ pour l'enregistrer comme combo" width="900" height="1868" loading="lazy">
+                    <figcaption class="mono">Assiette et création de combo</figcaption>
+                </figure>
+            </div>
+
+            <article class="project-description">
+                <section>
+                    <h2>Entraînement</h2>
+                    <p>Chaque jour de la semaine reçoit une séance ou un repos. La séance se lance directement depuis le planning, en mode « live » : on note les charges et les répétitions, et le volume se calcule au fil de l'entraînement. Une séance manquée peut être reportée sur un jour de repos suivant. Chaque lundi, l'application fait elle-même le bilan de la semaine : si toutes les séances ont été faites, la série (streak) augmente, puis le cycle repart sans rien ressaisir. Les calories brûlées sont estimées à partir du tonnage soulevé et du poids corporel.</p>
+                </section>
+            </article>
+
+            <div class="phone-gallery">
+                <figure>
+                    <img src="assets/img/espace-performance-sport.jpg" alt="Tableau de bord sport en mode sombre : séances Lower et Pull dépliées avec leurs exercices et les boutons Ajouter un exercice et Lancer la séance" width="900" height="1859" loading="lazy">
+                    <figcaption class="mono">Tableau de bord sport</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/espace-performance-seance-en-cours.jpg" alt="Séance Pull en cours : pour chaque exercice, curseurs de charge en kilos et de répétitions, et bouton Ajouter une série" width="900" height="1866" loading="lazy">
+                    <figcaption class="mono">Séance en cours</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/espace-performance-ajout-exercice.jpg" alt="Fenêtre Ajouter à Pull avec une liste déroulante pour choisir l'exercice Rowing et un bouton Valider l'exercice" width="900" height="1868" loading="lazy">
+                    <figcaption class="mono">Ajout d'un exercice</figcaption>
+                </figure>
+            </div>
+
+            <article class="project-description">
+                <section>
+                    <h2>Profil &amp; objectifs</h2>
+                    <p>Le métabolisme de base est calculé à partir du poids, de la taille et de l'âge. Les objectifs en protéines, glucides et lipides se règlent avec des curseurs, et un espace de gestion permet de modifier ou supprimer les aliments et séances enregistrés.</p>
+                </section>
+            </article>
+
+            <div class="phone-gallery">
+                <figure>
+                    <img src="assets/img/espace-performance-profil-metriques.jpg" alt="Onglet Métriques du profil : curseurs pour le poids (95 kg), la taille (183 cm) et l'âge (21 ans)" width="900" height="1868" loading="lazy">
+                    <figcaption class="mono">Profil : métriques</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/espace-performance-profil-aliments.jpg" alt="Onglet Aliments du profil : liste des aliments et des combos enregistrés avec leurs valeurs nutritionnelles et les boutons Modifier et Supprimer" width="900" height="1868" loading="lazy">
+                    <figcaption class="mono">Gestion des aliments</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/espace-performance-profil-seances.jpg" alt="Onglet Séances du profil : séances Lower, Pull et Push avec leur zone travaillée, leur nombre d'exercices et les boutons Modifier et Supprimer" width="900" height="1860" loading="lazy">
+                    <figcaption class="mono">Gestion des séances</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/espace-performance-reglages.jpg" alt="Écran Réglages : bouton Passer au mode clair, choix du style de menu (texte ou icônes) et six couleurs d'accentuation" width="900" height="1863" loading="lazy">
+                    <figcaption class="mono">Réglages</figcaption>
+                </figure>
+            </div>
+
+            <article class="project-description">
+                <section>
+                    <h2>Mode sombre / mode clair</h2>
+                    <p>Les mêmes écrans dans les deux thèmes, avec les mêmes composants.</p>
+                </section>
+            </article>
+
+            <div class="phone-gallery phone-gallery-pair">
+                <figure>
+                    <img src="assets/img/espace-performance-nutrition.jpg" alt="Tableau de bord nutrition en mode sombre, jauge à 608 kcal sur 2200" width="900" height="1871" loading="lazy">
+                    <figcaption class="mono">Accueil — sombre</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/espace-performance-nutrition-clair.jpg" alt="Tableau de bord nutrition en mode clair, jauge à 608 kcal sur 2200 et accent rouge corail" width="900" height="1866" loading="lazy">
+                    <figcaption class="mono">Accueil — clair</figcaption>
+                </figure>
+            </div>
+
+            <div class="phone-gallery phone-gallery-pair">
+                <figure>
+                    <img src="assets/img/espace-performance-sport.jpg" alt="Tableau de bord sport en mode sombre avec la liste des séances" width="900" height="1859" loading="lazy">
+                    <figcaption class="mono">Sport — sombre</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/espace-performance-sport-clair.jpg" alt="Tableau de bord sport en mode clair avec les séances Lower, Pull et Push repliées" width="900" height="1868" loading="lazy">
+                    <figcaption class="mono">Sport — clair</figcaption>
+                </figure>
+            </div>
+
+            <div class="phone-gallery phone-gallery-pair">
+                <figure>
+                    <img src="assets/img/espace-performance-profil-metriques.jpg" alt="Profil en mode sombre, onglet Métriques avec les curseurs de poids, taille et âge" width="900" height="1868" loading="lazy">
+                    <figcaption class="mono">Profil — sombre</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/espace-performance-profil-metriques-clair.jpg" alt="Profil en mode clair, onglet Métriques avec les curseurs de poids, taille et âge" width="900" height="1868" loading="lazy">
+                    <figcaption class="mono">Profil — clair</figcaption>
+                </figure>
+            </div>
+
+            <article class="project-description">
+                <section>
+                    <h2>Défis techniques</h2>
+                    <ul>
+                        <li>Architecture full-stack : un front Vue 3 (Vite) découpé en quatre tableaux de bord, qui communique avec une API REST en PHP 8 (PDO) reliée à une base MySQL relationnelle (utilisateurs, aliments, routines, historiques).</li>
+                        <li>Logique temporelle : détecter le changement de semaine à partir de la date du lundi pour clôturer le cycle, mettre à jour la série et réinitialiser les séances automatiquement.</li>
+                        <li>Calculs métier : normalisation des valeurs nutritionnelles, estimation de la dépense calorique, métabolisme de base.</li>
+                        <li>Design system : toute l'interface repose sur des variables CSS, ce qui permet de passer d'un thème sombre en verre dépoli à un thème clair avec les mêmes composants.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Résultat</h2>
+                    <p>[À compléter : depuis quand tu l'utilises, ce qu'elle t'a apporté concrètement.]</p>
+                </section>
+
+                <section>
+                    <h2>Ce que j'ai appris</h2>
+                    <p>Concevoir une API REST de bout en bout, structurer un design system maintenable, et surtout améliorer l'expérience utilisateur en retirant des étapes plutôt qu'en ajoutant des fonctionnalités.</p>
+                </section>
+            </article>
+
+            <!-- Lien final vers le projet -->
+            <div class="project-action">
+                <a href="https://germainpoincloux.techniquesmedia.com/Sport-germain/" target="_blank" rel="noopener" class="action-link">
+                    Voir l'application <span class="arrow">↗</span>
+                </a>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content mono">
+                <p>Status : <span class="highlight">Recherche de stage (Avril 2027) — Région de Québec</span></p>
+                <a href="mailto:germainpoincloux@email.com" class="email-link">germainpoincloux@email.com</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
