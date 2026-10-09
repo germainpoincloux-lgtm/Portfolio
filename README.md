@@ -4,7 +4,7 @@ Portfolio personnel au format « répertoire de fichiers » : une page d'index q
 
 Site HTML/CSS statique, sans framework ni dépendance.
 
-🔗 **Site en ligne :** https://germainpoincloux-lgtm.github.io/portfolio/
+🔗 **Site en ligne :** https://germainpoincloux-lgtm.github.io/Portfolio/
 
 ## Structure
 
