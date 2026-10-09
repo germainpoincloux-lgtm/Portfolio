@@ -1,0 +1,18 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+.idea/
+*.swp
+
+# Outils (si on en ajoute plus tard)
+node_modules/
+
+# Fichiers lourds ou sources à ne pas versionner
+*.mp4
+*.mov
+*.psd
+*.ai
+*.zip
