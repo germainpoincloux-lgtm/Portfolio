@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Germain Poincloux — Portfolio</title>
+    <meta name="description" content="Portfolio d'intégration multimédia de Germain Poincloux : chaque projet est un disque.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/vinyles.css">
+    <!-- Three.js depuis un CDN : aucune installation ni compilation -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+            }
+        }
+    </script>
+    <script type="module" src="js/app.js"></script>
+</head>
+<body>
+    <a href="#contenu" class="skip-link">Aller au contenu</a>
+
+    <header class="barre">
+        <a href="#/" class="logo" aria-label="Accueil">GP.</a>
+        <nav class="barre-nav" aria-label="Principal">
+            <a href="#/" data-lien="accueil">Accueil</a>
+            <a href="#/vinyles" data-lien="vinyles">Vinyles</a>
+            <a id="lien-projet" data-lien="projet" aria-disabled="true">Projet</a>
+        </nav>
+        <a href="../index.html" class="barre-annexe">Version texte</a>
+    </header>
+
+    <!-- Scène 3D : décorative pour les lecteurs d'écran, les liens équivalents sont plus bas -->
+    <div id="scene" class="scene" aria-hidden="true"></div>
+
+    <main id="contenu" tabindex="-1">
+
+        <!-- VUE 1 : ACCUEIL -->
+        <section id="vue-accueil" class="vue vue-accueil" hidden>
+            <div class="accueil-texte">
+                <p class="surtitre">Germain Poincloux</p>
+                <h1 class="titre-suisse">Intégration<br><span class="texte-accent">Multimédia</span></h1>
+                <div class="accueil-meta">
+                    <div><span class="etiquette">Portfolio</span>2026</div>
+                    <div><span class="etiquette">Localisation</span>Saguenay, QC</div>
+                </div>
+                <a href="#/vinyles" class="bouton-plein">Explorer</a>
+                <p class="note">Chaque projet est un disque. La musique ne démarre jamais seule.</p>
+            </div>
+            <div class="forme forme-cercle" aria-hidden="true"></div>
+            <div class="forme forme-bloc" aria-hidden="true"></div>
+        </section>
+
+        <!-- VUE 2 : PILE DE VINYLES -->
+        <section id="vue-vinyles" class="vue vue-vinyles" hidden>
+            <div class="vinyles-entete">
+                <h1 class="petit-titre">Sélectionnez un projet</h1>
+                <div id="filtres" class="filtres" role="group" aria-label="Filtrer par chapitre"></div>
+                <p id="erreur-catalogue" class="erreur" role="alert" hidden></p>
+            </div>
+
+            <!-- Plan B sans WebGL : une simple grille de cartes -->
+            <div id="liste-secours" class="liste-secours" hidden>
+                <ul id="liste-cartes" class="liste-cartes"></ul>
+            </div>
+
+            <!-- Accès clavier / lecteur d'écran à chaque disque -->
+            <ul id="liens-acces" class="liens-acces"></ul>
+
+            <div id="infobulle" class="infobulle" hidden>
+                <p class="infobulle-chapitre"></p>
+                <p class="infobulle-titre"></p>
+                <p class="infobulle-meta"></p>
+            </div>
+
+            <div id="carte-selection" class="carte-selection" hidden>
+                <p class="carte-chapitre"></p>
+                <p class="carte-titre"></p>
+                <p class="carte-type"></p>
+                <div class="carte-actions">
+                    <button type="button" id="ouvrir-selection" class="bouton-clair">Ouvrir le projet</button>
+                    <button type="button" id="fermer-selection" class="bouton-contour" aria-label="Refermer le disque">✕</button>
+                </div>
+            </div>
+
+            <p class="aide">
+                Survolez une tranche · cliquez pour sortir le disque · cliquez encore pour l'ouvrir ·
+                ↑ ↓ pour parcourir · Échap pour refermer
+            </p>
+        </section>
+
+        <!-- VUE 3 : PROJET OUVERT -->
+        <section id="vue-projet" class="vue vue-projet" hidden>
+            <!-- Sans WebGL : tourne-disque en CSS à la place du disque 3D -->
+            <div id="platine-secours" class="platine-secours" hidden>
+                <div class="platine" role="img" aria-label="Disque à l'arrêt">
+                    <div class="platine-disque"><div class="platine-macaron"></div></div>
+                    <div class="platine-bras" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <article id="panneau-projet" class="panneau">
+                <a href="#/vinyles" class="retour">← Vinyles</a>
+                <p id="etat-projet" class="etat-projet">Chargement…</p>
+                <div id="contenu-projet" hidden>
+                    <header class="panneau-entete">
+                        <div>
+                            <p class="panneau-chapitre"></p>
+                            <h1 class="panneau-titre"></h1>
+                            <p class="panneau-sous-titre"></p>
+                        </div>
+                        <span class="panneau-piste mono"></span>
+                    </header>
+                    <p class="panneau-meta"></p>
+
+                    <div class="musique">
+                        <button type="button" id="bouton-musique" class="bouton-musique">
+                            <span>
+                                <span class="musique-action">Lancer le disque</span>
+                                <span class="musique-titre"></span>
+                            </span>
+                            <span class="musique-icone" aria-hidden="true">▶</span>
+                        </button>
+                        <p class="musique-note">La musique que j'écoutais en réalisant ce projet. Sans compte Spotify connecté, seul un extrait de 30 s est joué.</p>
+                    </div>
+
+                    <div class="panneau-corps"></div>
+                    <ul class="technos"></ul>
+                    <div class="panneau-liens"></div>
+                </div>
+            </article>
+        </section>
+
+        <!-- VUE 4 : ADRESSE INCONNUE -->
+        <section id="vue-introuvable" class="vue vue-introuvable" hidden>
+            <h1 class="titre-suisse">404</h1>
+            <p>Ce disque n'existe pas.</p>
+            <a href="#/vinyles" class="bouton-plein">Retour aux vinyles</a>
+        </section>
+    </main>
+
+    <!-- Mini-lecteur : apparaît au premier lancement d'un disque -->
+    <aside id="lecteur" class="lecteur" aria-label="Lecteur de musique" hidden>
+        <div class="lecteur-ligne">
+            <div class="lecteur-disque" aria-hidden="true"></div>
+            <div class="lecteur-textes">
+                <p class="lecteur-titre"></p>
+                <p class="lecteur-artiste"></p>
+            </div>
+            <button type="button" id="lecteur-bouton" class="bouton-contour">Lecture</button>
+        </div>
+        <p id="lecteur-erreur" class="lecteur-erreur" role="alert" hidden></p>
+        <div id="lecteur-hote"></div>
+    </aside>
+</body>
+</html>

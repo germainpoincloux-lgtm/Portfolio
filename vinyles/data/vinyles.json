@@ -1,0 +1,149 @@
+{
+    "chapitres": [
+        { "id": 1, "slug": "programmation", "numero": 1, "titre": "Programmation", "description": null, "couleur_hex": "#1B357E" },
+        { "id": 2, "slug": "design", "numero": 2, "titre": "Design", "description": null, "couleur_hex": "#192A57" },
+        { "id": 3, "slug": "experience", "numero": 3, "titre": "Expérience", "description": null, "couleur_hex": "#0F1524" },
+        { "id": 4, "slug": "personnel", "numero": 4, "titre": "Projets personnels", "description": null, "couleur_hex": "#E2E8F8" }
+    ],
+    "projets": [
+        {
+            "id": 1,
+            "slug": "espace-performance",
+            "titre": "Espace Performance",
+            "sous_titre": "Suivi sportif et nutrition, mobile-first",
+            "type_projet": "Application Web",
+            "annee": 2026,
+            "role": "Conception, design et développement full-stack",
+            "resume": "Un outil de suivi sportif qui regroupe la planification des entraînements, le journal alimentaire et le suivi des métriques corporelles, avec une règle simple : chaque saisie doit demander le moins de gestes possible.",
+            "couleur_hex": null,
+            "chapitre_slug": "programmation",
+            "chapitre_titre": "Programmation",
+            "chapitre_couleur": "#1B357E",
+            "piste": null,
+            "url_page": "../espace-performance.html",
+            "technologies": [
+                { "id": 1, "nom": "Vue 3", "slug": "vue-3" },
+                { "id": 2, "nom": "Vite", "slug": "vite" },
+                { "id": 3, "nom": "PHP 8", "slug": "php-8" },
+                { "id": 4, "nom": "MySQL", "slug": "mysql" }
+            ]
+        },
+        {
+            "id": 2,
+            "slug": "charme-des-vallons",
+            "titre": "Le Charme des Vallons",
+            "sous_titre": "Site d'un gîte avec calendrier de disponibilités",
+            "type_projet": "Web sur mesure",
+            "annee": 2026,
+            "role": "Design, intégration et développement",
+            "resume": "Le premier site dédié d'un gîte de deux chambres à Saint-Senoux, en Bretagne : pensé pour mettre en valeur le cachet du lieu et rendre la réservation simple, grâce à un calendrier connecté à Google Agenda.",
+            "couleur_hex": null,
+            "chapitre_slug": "programmation",
+            "chapitre_titre": "Programmation",
+            "chapitre_couleur": "#1B357E",
+            "piste": null,
+            "url_page": "../charme-des-vallons.html",
+            "technologies": [
+                { "id": 5, "nom": "PHP", "slug": "php" },
+                { "id": 6, "nom": "JavaScript", "slug": "javascript" },
+                { "id": 7, "nom": "API Google Calendar", "slug": "google-calendar" }
+            ]
+        },
+        {
+            "id": 3,
+            "slug": "inventaire-interdit",
+            "titre": "L'Inventaire Interdit",
+            "sous_titre": null,
+            "type_projet": "Web sur mesure",
+            "annee": 2026,
+            "role": null,
+            "resume": "Un site qui explore l'impact de la loi 96 sur les détaillants de jeux de société au Québec : une interface claire au-dessus d'un catalogue structuré avec des blocs Gutenberg sur mesure et des champs ACF.",
+            "couleur_hex": null,
+            "chapitre_slug": "programmation",
+            "chapitre_titre": "Programmation",
+            "chapitre_couleur": "#1B357E",
+            "piste": null,
+            "url_page": "../projet-template.html",
+            "technologies": [
+                { "id": 8, "nom": "WordPress", "slug": "wordpress" },
+                { "id": 5, "nom": "PHP", "slug": "php" },
+                { "id": 9, "nom": "ACF", "slug": "acf" }
+            ]
+        },
+        {
+            "id": 4,
+            "slug": "simulateur-draft-lol",
+            "titre": "Simulateur Draft LoL",
+            "sous_titre": null,
+            "type_projet": "Application Web",
+            "annee": 2025,
+            "role": null,
+            "resume": null,
+            "couleur_hex": null,
+            "chapitre_slug": "programmation",
+            "chapitre_titre": "Programmation",
+            "chapitre_couleur": "#1B357E",
+            "piste": null,
+            "technologies": [
+                { "id": 6, "nom": "JavaScript", "slug": "javascript" },
+                { "id": 10, "nom": "HTML", "slug": "html" },
+                { "id": 11, "nom": "CSS", "slug": "css" }
+            ]
+        },
+        {
+            "id": 5,
+            "slug": "documentaire-mont-jacob",
+            "titre": "Documentaire Mont Jacob",
+            "sous_titre": null,
+            "type_projet": "Production vidéo",
+            "annee": 2026,
+            "role": "Scénarisation, montage",
+            "resume": null,
+            "couleur_hex": null,
+            "chapitre_slug": "design",
+            "chapitre_titre": "Design",
+            "chapitre_couleur": "#192A57",
+            "piste": null,
+            "technologies": []
+        },
+        {
+            "id": 6,
+            "slug": "portfolio-vinyle-3d",
+            "titre": "Portfolio Vinyle 3D",
+            "sous_titre": "Ce site : chaque projet est un disque",
+            "type_projet": "Web expérientiel",
+            "annee": 2026,
+            "role": "Design, intégration 3D",
+            "resume": "Une pile de vinyles en Three.js : on survole une tranche, on sort le disque de sa pochette, puis on l'ouvre pour lire l'étude de cas pendant qu'il tourne sur la platine.",
+            "couleur_hex": null,
+            "chapitre_slug": "personnel",
+            "chapitre_titre": "Projets personnels",
+            "chapitre_couleur": "#E2E8F8",
+            "piste": null,
+            "technologies": [
+                { "id": 12, "nom": "Three.js", "slug": "three-js" },
+                { "id": 13, "nom": "WebGL", "slug": "webgl" },
+                { "id": 4, "nom": "MySQL", "slug": "mysql" }
+            ]
+        },
+        {
+            "id": 7,
+            "slug": "boss-fight-roi-alaric",
+            "titre": "Boss Fight : Roi Alaric",
+            "sous_titre": null,
+            "type_projet": "Jeu vidéo 2D",
+            "annee": 2026,
+            "role": null,
+            "resume": null,
+            "couleur_hex": null,
+            "chapitre_slug": "personnel",
+            "chapitre_titre": "Projets personnels",
+            "chapitre_couleur": "#E2E8F8",
+            "piste": null,
+            "technologies": [
+                { "id": 14, "nom": "Unity", "slug": "unity" },
+                { "id": 15, "nom": "C#", "slug": "c-sharp" }
+            ]
+        }
+    ]
+}

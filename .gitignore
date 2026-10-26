@@ -16,3 +16,6 @@ node_modules/
 *.psd
 *.ai
 *.zip
+
+# Identifiants MySQL locaux (copier vinyles/api/config.example.php)
+vinyles/api/config.php

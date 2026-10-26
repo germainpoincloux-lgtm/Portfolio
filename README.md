@@ -13,6 +13,7 @@ portfolio/
 ├── index.html              ← page d'accueil (liste des projets)
 ├── projet-template.html    ← page de projet (L'Inventaire Interdit)
 ├── style.css               ← styles de tout le site
+├── vinyles/                ← version 3D (Three.js), voir vinyles/README.md
 ├── README.md               ← ce fichier
 └── CONTRIBUTING.md         ← règles pour contribuer
 ```
