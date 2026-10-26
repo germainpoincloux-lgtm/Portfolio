@@ -8,7 +8,7 @@ api(function () {
 
     $st = pdo()->prepare(
         'SELECT p.id, p.slug, p.titre, p.sous_titre, p.type_projet, p.annee, p.role, p.resume,
-                p.pochette_url, p.couleur_hex, p.url_code, p.url_site,
+                p.pochette_url, p.couleur_hex, p.url_code, p.url_site, p.url_page,
                 c.slug AS chapitre_slug, c.titre AS chapitre_titre, c.couleur_hex AS chapitre_couleur,
                 ' . SELECT_PISTE . '
          FROM projet p
@@ -64,6 +64,7 @@ api(function () {
         'couleur_hex'  => $r['couleur_hex'],
         'url_code'     => $r['url_code'],
         'url_site'     => $r['url_site'],
+        'url_page'     => $r['url_page'],
         'chapitre'     => [
             'slug'        => $r['chapitre_slug'],
             'titre'       => $r['chapitre_titre'],

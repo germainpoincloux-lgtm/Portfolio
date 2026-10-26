@@ -1,0 +1,41 @@
+PORTFOLIO VINYLE 3D — INSTALLATION DANS HTDOCS (rien à compiler)
+================================================================
+
+1. Copier le dossier « Portfolio » dans htdocs  (ex. C:\xampp\htdocs\Portfolio)
+   (remplace l'ancienne version si elle y est déjà)
+
+2. Ouvrir  http://localhost/Portfolio/vinyles/
+   (ou  http://localhost:8080/Portfolio/vinyles/  si Apache est sur 8080)
+   -> Ça marche déjà : sans base de données, les projets viennent de vinyles/data/vinyles.json.
+
+3. (Facultatif) Brancher MySQL — panneau XAMPP : démarrer Apache ET MySQL,
+   puis http://localhost/phpmyadmin -> onglet SQL :
+   a) coller vinyles/sql/schema_v2.sql      -> Exécuter  (ATTENTION : efface les tables du portfolio)
+   b) coller vinyles/sql/seed_portfolio.sql -> Exécuter  (tes vrais projets)
+      (seed_demo.sql = les anciennes données de démonstration « Projet Alpha »…)
+   Tu as déjà une base créée avec l'ancien schéma et tu veux la garder ?
+   Exécute seulement vinyles/sql/maj_url_page.sql.
+
+4. Port MySQL : vinyles/api/config.php est réglé sur 3307 (comme ton ancien connexion.php).
+   Si ton MySQL est sur 3306, change la valeur dans ce fichier.
+
+VÉRIFIER QUE LA BASE EST UTILISÉE
+  - Ouvrir http://localhost/Portfolio/vinyles/api/vinyles.php
+      * du JSON avec chapitres + projets -> la base est utilisée
+      * "Erreur serveur" -> mauvais port, MySQL arrêté ou SQL pas importé :
+        le site continue de marcher avec vinyles/data/vinyles.json
+  - "could not find driver" (xampp\apache\logs\error.log) :
+      dans xampp\php\php.ini retirer le « ; » devant  extension=pdo_mysql  puis redémarrer Apache
+  - Après une modification : Ctrl+F5 pour vider le cache.
+
+LES ÉCRANS
+  Accueil -> Vinyles (pile 3D + filtres) -> Projet (étude de cas + disque 3D qui tourne)
+  - Survol d'une tranche : le disque se redresse à demi. Clic : il sort. Second clic : ouvre le projet.
+  - Clavier : flèches haut/bas pour parcourir, Entrée pour ouvrir, Échap pour refermer.
+  - Sur téléphone : touche un disque, puis « Ouvrir le projet ».
+  - Pas de pile 3D mais une liste : WebGL indisponible (la liste sert de plan B).
+  - Une connexion Internet est nécessaire (Three.js et la police Inter viennent d'un CDN).
+
+MUSIQUE (Spotify)
+  Table « piste » : ajouter une piste (spotify_id = la partie entre /track/ et « ? » du lien de partage),
+  puis renseigner piste_id dans la table projet.

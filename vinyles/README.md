@@ -49,11 +49,12 @@ Les projets viennent alors de `data/vinyles.json`.
 ### Avec la base de données (XAMPP)
 
 1. Démarrer Apache et MySQL.
-2. Dans phpMyAdmin, onglet SQL : exécuter `sql/schema_v2.sql`, puis `sql/seed_demo.sql`
-   (le schéma **efface** les tables existantes du portfolio).
+2. Dans phpMyAdmin, onglet SQL : exécuter `sql/schema_v2.sql`, puis `sql/seed_portfolio.sql`
+   (vrais projets ; `seed_demo.sql` = données de démonstration). Le schéma **efface** les tables
+   existantes ; pour garder une base déjà créée, exécuter seulement `sql/maj_url_page.sql`.
 3. Copier `api/config.example.php` en `api/config.php` et ajuster le port MySQL (3306 ou 3307).
    `config.php` est ignoré par Git.
-4. Ouvrir `http://localhost/Portfolio/vinyles/`.
+4. Ouvrir `http://localhost/Portfolio/vinyles/`. Pas à pas : voir `LISEZ-MOI.txt`.
 
 Si l'API ne répond pas (pas de PHP, base vide, mauvais port), la page bascule
 automatiquement sur `data/vinyles.json` ; le motif est affiché dans la console.

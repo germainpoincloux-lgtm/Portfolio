@@ -68,6 +68,7 @@ CREATE TABLE projet (
   couleur_hex     CHAR(7) NULL,                     -- couleur dominante (pré-calculée plus tard)
   url_code        VARCHAR(255) NULL,
   url_site        VARCHAR(255) NULL,
+  url_page        VARCHAR(255) NULL,                -- étude de cas HTML complète (ex. '../espace-performance.html')
   statut          ENUM('brouillon','visible','archive') NOT NULL DEFAULT 'brouillon',
   ordre           SMALLINT NOT NULL DEFAULT 0,
   created_at      TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
